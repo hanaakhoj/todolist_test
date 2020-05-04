@@ -1,0 +1,36 @@
+{
+  "name": "todolist_test",
+  "version": "1.0.0",
+  "description": "Todo list using VueJS & NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanaakhoj/todolist_test.git"
+  },
+  "author": "Hanaa KHOJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanaakhoj/todolist_test/issues"
+  },
+  "homepage": "https://github.com/hanaakhoj/todolist_test#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.7"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": ["node_modules/**/node_modules"],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}

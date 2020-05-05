@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
-module.exports = new Sequelize('todolist', 'postgres', 'postgres', {
+const db = {};
+
+const sequelize= new Sequelize('todolist', 'postgres', 'postgres', {
     host: 'localhost',
     dialect: 'postgres',
 
@@ -10,3 +12,8 @@ module.exports = new Sequelize('todolist', 'postgres', 'postgres', {
         idle: 10000
     },
 });
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+module.exports = db;

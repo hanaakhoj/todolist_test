@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "dev": "nodemon --inspect server.js --watch todos --watch model --watch server.js"
   },
   "repository": {
     "type": "git",
@@ -18,19 +19,26 @@
   },
   "homepage": "https://github.com/hanaakhoj/todolist_test#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
     "express": "^4.17.1",
-    "nodemon": "^2.0.3",
     "pg": "^8.0.3",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.7"
   },
   "nodemonConfig": {
     "restartable": "rs",
-    "ignore": ["node_modules/**/node_modules"],
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
     "delay": "2500",
     "env": {
       "NODE_ENV": "development",
       "PORT": 4000
     }
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.3"
   }
 }
